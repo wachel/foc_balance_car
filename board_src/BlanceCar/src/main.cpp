@@ -1,12 +1,20 @@
 #include "test_as5600.h"
-
-#include "test_simple_foc2.h"
+TestAS5600 test_case = TestAS5600();
 void setup() {
-    setup_foc2();
+    test_case.Init();
 }
 void loop() {
-    loop_foc2();
+    test_case.Update();
 }
+
+
+// #include "test_simple_foc2.h"
+// void setup() {
+//     setup_foc2();
+// }
+// void loop() {
+//     loop_foc2();
+// }
 
 // #include "test_simple_foc.h"
 // TestSimpleFoc test_case = TestSimpleFoc();
